@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_name_address_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="-0dp"
+        android:layout_toStartOf="@+id/image_drop_down"
+        android:background="@color/white"
+        android:paddingStart="20dp"
+        android:text="Tên địa chỉ"
+        android:textColor="@color/app_main_color_xanhduong"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_item_address_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@+id/txt_name_address_selected"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/image_drop_down"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="location"
+        android:textColor="@color/app_main_color_xanhduong"
+        android:textSize="14sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:id="@+id/image_drop_down"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:scaleType="center"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/txt_item_address_id_selected"
+        />
+
+    <TextView
+        android:layout_alignBottom="@+id/txt_item_address_selected"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/app_main_color_xanhduong"/>
+
+</RelativeLayout>
+

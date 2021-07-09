@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "937742805444",
+    "project_id": "mobile-android-final-project",
+    "storage_bucket": "mobile-android-final-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937742805444:android:2adba0851f1a2d20a51c91",
+        "android_client_info": {
+          "package_name": "hcmute.edu.vn.mssv18110332"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937742805444-grsshnp7rn9tmrf1m2ao8b4a2ft9ase3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hcmute.edu.vn.mssv18110332",
+            "certificate_hash": "2a1a57fd70858334005f1c3926184a70f9e6dcc6"
+          }
+        },
+        {
+          "client_id": "937742805444-b0n066ksuejd8o0q1oeln1d3ir3qsp3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRIGf6wBNiO-DLxkf9cwRi0hjy5j9Zo-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937742805444-b0n066ksuejd8o0q1oeln1d3ir3qsp3k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

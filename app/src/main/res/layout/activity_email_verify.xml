@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegisterActivity"
+    android:orientation="vertical"
+    android:layout_margin="0dp"
+    android:background="@color/Yellow"
+    android:weightSum="10">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="228dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#03A9F4"
+            android:gravity="center"
+            android:text="Welcome to the world 1st conveniences store!"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/reg_image_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_ministop_svg"
+            tools:ignore="VectorDrawableCompat" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:text="You have to verify your email before registration is complete!"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="type your email again:"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/vef_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_txt_background_trang_boder"
+            android:hint="Type your email here!"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
+            android:textSize="24dp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/vef_verify_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background_datroi"
+            android:text="Verify"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

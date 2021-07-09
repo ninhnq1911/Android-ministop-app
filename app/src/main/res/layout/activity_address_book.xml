@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddressBookActivity"
+    android:orientation="vertical"
+    android:background="@color/app_main_color_vang"
+    android:weightSum="10">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/ad_14"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="SỔ ĐỊA CHỈ CỦA BẠN"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/app_main_color_xanhduong"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_address_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right|bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm địa chỉ mới"
+            android:layout_marginBottom="20dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btn_add_new_address_book"
+            app:civ_border_width="3dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:civ_border_color="@color/app_main_color_do"
+            app:backgroundTint="#53ECFF"
+            android:layout_margin="20dp"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_add_location_alt_42" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

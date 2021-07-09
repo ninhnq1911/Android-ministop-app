@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.shoppingcart.ShoppingCartFragment"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AndroidFinalCourseProject.AppBarOverlay">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/app_cart_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app_main_color_datroi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:popupTheme="@style/Theme.AndroidFinalCourseProject.PopupOverlay"
+                app:title="Giỏ hàng của bạn"
+                app:titleTextColor="@color/app_main_color_vang" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_delete_from_cart_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/transparent"
+                android:drawableRight="@drawable/outline_delete_white_24dp"
+                android:text="Xóa"
+                android:textColor="@color/White"
+                android:textSize="14sp"
+                app:layout_anchor="@+id/app_cart_toolbar"
+                app:layout_anchorGravity="right|center_vertical" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Spinner
+        android:id="@+id/list_address_cart"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/DarkOrange" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_item_cart"
+        android:layout_width="match_parent"
+        android:layout_height="475dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="0dp"
+        android:background="@color/app_main_color_vang"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/empty_layout_view_cart"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="475dp"
+        android:background="@color/app_main_color_vang">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.324"
+            app:srcCompat="@drawable/icon_ministop_svg" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="223dp"
+            android:layout_height="50dp"
+            android:text="Chọn thêm sản phẩm nhé! MiniStop còn nhiều ưu đãi hấp dẫn dành cho bạn đó"
+            android:textAlignment="center"
+            android:textColor="@color/app_main_color_xanhduong"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_empty_message"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_empty_message"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:text="KHÔNG CÓ SẢN PHẨM NÀO TRONG GIỎ"
+            android:textAlignment="center"
+            android:textColor="@color/app_main_color_xanhduong"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100"
+        android:background="@drawable/input_txt_background_trang_boder_no_corner">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="100"
+            android:gravity="center_vertical">
+            <CheckBox
+                android:id="@+id/check_all_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Tất cả"
+                android:textSize="18sp" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Tổng cộng: "
+                    android:textColor="@color/app_main_color_cam"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/txt_total_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="9,134,430đ"
+                    android:textSize="18sp"
+                    android:textColor="@color/app_main_color_cam"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="100"
+            android:paddingStart="10dp"
+            android:gravity="center_horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_pay_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Thanh toán"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textAllCaps="false"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                android:textColor="@color/app_main_color_xanhduong"
+                android:background="@drawable/input_txt_background_vang_boder_circle"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

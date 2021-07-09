@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegisterActivity"
+    android:orientation="vertical"
+    android:layout_margin="0dp"
+    android:background="@color/Yellow"
+    android:weightSum="10">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="228dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#03A9F4"
+            android:gravity="center"
+            android:text="Welcome to the world 1st conveniences store!"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/reg_image_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_ministop_svg"
+            tools:ignore="VectorDrawableCompat" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="5"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username:"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/reg_username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="20dp"
+            android:inputType="textEmailAddress"
+            android:textSize="24dp"
+            android:background="@drawable/input_txt_background_trang_boder"
+            android:hint="Nhập email của bạn!"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password:"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/reg_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="20dp"
+            android:textSize="24dp"
+            android:background="@drawable/input_txt_background_trang_boder"
+            android:hint="Nhập password!"
+            android:inputType="textPassword"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm password:"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/reg_confirm_pass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="20dp"
+            android:textSize="24dp"
+            android:background="@drawable/input_txt_background_trang_boder"
+            android:hint="Xác nhận passowrd!"
+            android:inputType="textPassword"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/reg_register_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_background_datroi"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:text="Đăng kí"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/reg_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:textAllCaps="false"
+            android:textColor="@color/Blue"
+            android:text="Đã có tài khoản? Đăng nhập ngay"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take an image?"
+            android:layout_gravity="center"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/reg_take_photo_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:civ_border_color="@color/Blue"
+            app:civ_border_width="3dp"
+            app:civ_border_overlay="true"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:src="@drawable/new_camera_icon" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:background="@drawable/background_trang_corner_radius_20dp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_dialog_name_confirm_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="THÔNG BÁO"
+        app:textAllCaps="true"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/background_vang_corner_top_left_top_right_radius_10dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_dialog_message_confirm_dialog"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="18sp"
+        android:text="Nội dung thông báo!"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel_confirm_dialog"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_xam_corner_radius_10dp"
+            android:text="Hủy"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_confirm_confirm_dialog"
+            android:background="@drawable/background_vang_corner_radius_10dp"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:text="Xác nhận"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

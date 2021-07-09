@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main_color_vang">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/gradient_background_selector_2"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:text="Update profile"
+            android:textSize="30sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:textSize="32dp"
+        android:layout_marginTop="80dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="You have to verify your phone number before add it to your profile"
+        />
+
+    <RelativeLayout
+        android:id="@+id/phoneAuth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="16dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone number"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_defaultNameCode="VN" />
+
+                <EditText
+                    android:id="@+id/phoneText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="phone"
+                    android:textSize="24dp"
+                    android:inputType="phone"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sendButton"
+        android:layout_width="200dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneAuth"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:onClick="sendCode"
+        android:background="@color/app_main_color_datroi"
+        android:text="Send Code"
+        android:textColor="#FFF" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resendButton"
+        android:textStyle="bold"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sendButton"
+        android:layout_centerHorizontal="true"
+        android:onClick="resendCode"
+        android:layout_marginTop="29dp"
+        android:background="@color/app_main_color_datroi"
+        android:text="Resend Code"
+        android:textColor="#FFF" />
+
+    <EditText
+        android:id="@+id/codeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resendButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        android:ems="10"
+        android:hint="Code"
+        android:inputType="number"
+        android:textColor="#000"
+        android:textColorHint="#000" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/verifyButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/codeText"
+        android:layout_alignLeft="@+id/codeText"
+        android:layout_alignRight="@+id/codeText"
+        android:layout_alignStart="@+id/codeText"
+        android:layout_below="@+id/codeText"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:onClick="verifyCode"
+        android:background="@color/app_main_color_datroi"
+        android:text="Verify Code"
+        android:textColor="#FFF" />
+
+</RelativeLayout>

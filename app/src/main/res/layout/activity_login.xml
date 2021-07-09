@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main_color_vang"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/vertical_ministop_icon"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+
+        android:layout_marginHorizontal="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng nhập"
+            android:gravity="center"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:textColor="@color/app_main_color_datroi"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên đăng nhập:"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_username"
+            android:paddingStart="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_txt_background_trang_boder"
+            android:hint="Nhập email của bạn!"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mật khẩu:"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_userpass"
+            android:paddingStart="20dp"
+            android:layout_height="50dp"
+            android:background="@drawable/input_txt_background_trang_boder"
+            android:layout_width="match_parent"
+            android:hint="Nhập passowrd của bạn!"
+            android:inputType="textPassword"
+            android:textSize="24dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_forgot_password_login"
+            android:layout_width="129dp"
+            android:layout_height="30dp"
+            android:background="@color/transparent"
+            android:layout_gravity="end"
+            android:text="Quên mật khẩu" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/button_background_datroi"
+            android:id="@+id/login"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="200dp"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:layout_height="50dp"
+            android:text="Đăng nhập"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap back button to return"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"/>
+
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

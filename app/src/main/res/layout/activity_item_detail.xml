@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ItemDetailActivity"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <ImageView
+        android:id="@+id/img_item_detail"
+        android:layout_weight="40"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/aquafina_500ml_bn5g"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/Orange"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_favorite_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/outline_favorite_border_white_24dp"/>
+
+        <TextView
+            android:id="@+id/txt_discounted_item_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="5,000đ"
+            android:textColor="@color/Red"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/txt_price_item_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/item_old_price_background"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="6,500đ"
+            android:textSize="24sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_weight="40"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/Orange">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/item_background"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingStart="5dp"
+                android:weightSum="10"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/ratingbar_item_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="3.5"
+                    android:stepSize="0.1" />
+
+                <TextView
+                    android:id="@+id/txt_rating_item_detail"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:text="(3.5)" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/txt_name_item_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Nước khoáng Aquafina"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/txt_provider_item_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Hãng sản xuất: Sai Gon Coop"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txt_mfg_item_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="NSX: 11-12-2020"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txt_exp_item_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="HSD: 11-12-2022"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txt_promotion_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:layout_marginTop="10dp"
+                android:text=" Mua 10 tặng 1"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/icon_sale_tag"
+                android:textColor="@color/Red"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txt_delivery_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Miễn phí giao hàng cho đơn trên 100k"
+                android:textStyle="bold"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="end"
+        android:background="@color/app_main_color_vang"
+        android:paddingEnd="10dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:background="@color/app_main_color_vang"
+            android:paddingEnd="10dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_ministop_svg"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_buy_now_detail"
+            android:layout_width="100dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/input_txt_background_trang_boder_circle"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:text="Mua ngay"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_add_to_card_detail"
+            android:layout_width="100dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_txt_background_trang_boder_circle"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:text="Thêm vào giỏ hàng"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

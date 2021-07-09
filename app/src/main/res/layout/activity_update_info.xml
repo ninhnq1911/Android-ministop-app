@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="user"
+            type="hcmute.edu.vn.mssv18110332.model.Useraccount" />
+        <import type="hcmute.edu.vn.mssv18110332.DAO.AddressDAO"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_main_color_vang">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/gradient_background_selector_2"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:text="Cập nhật thông tin"
+                android:textSize="30sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avatar_profile"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/layer_list_round_image_view"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/prf_txt_full_name"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/input_txt_background_trang_boder"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:hint=" Họ tên đầy đủ của bạn"
+            android:text="@{user.fullname}"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_avatar_profile" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:background="@drawable/input_txt_background_trang_boder"
+            android:id="@+id/txt_birth_profile"
+            android:layout_width="350dp"
+            android:layout_height="44dp"
+            android:text="@{user.birth}"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/outline_cake_black_24dp"
+            android:ems="10"
+            android:hint=" Nhập ngày sinh của bạn"
+            android:inputType="date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_phone_profile" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_phone_profile"
+            android:layout_width="350dp"
+            android:layout_height="44dp"
+            android:text="@{user.phonenumber}"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/input_txt_background_trang_boder"
+            android:drawableStart="@drawable/ic_baseline_phone_24"
+            android:ems="10"
+            android:hint=" Enter phone"
+            android:inputType="phone"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prf_txt_full_name" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/input_txt_background_trang_boder"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_birth_profile"
+            tools:ignore="MissingConstraints">
+
+            <RadioButton
+                android:id="@+id/radio_male_info"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="NỮ"
+                android:checked="@{user.gender==0}"
+                android:textColor="@color/black"
+                android:drawableStart="@drawable/outline_male_black_24dp"/>
+
+            <RadioButton
+                android:id="@+id/radio_female_info"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:checked="@{user.gender==1}"
+                android:text="Nam"
+                android:drawableStart="@drawable/outline_female_black_24dp"/>
+        </RadioGroup>
+
+        <ImageButton
+            android:id="@+id/btn_take_pic"
+            android:layout_width="58dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.683"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_avatar_profile"
+            app:layout_constraintVertical_bias="0.17"
+            app:srcCompat="@drawable/ic_camera2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_update_info"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/button_background_datroi"
+            android:text="cập nhật"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

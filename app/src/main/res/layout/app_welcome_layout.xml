@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main_color_datroi"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/app_welcom_icon"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập"
+        android:textAlignment="center"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Đăng kí"
+        android:textAlignment="center"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:text="Quên mật khẩu"
+        android:textAlignment="center"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

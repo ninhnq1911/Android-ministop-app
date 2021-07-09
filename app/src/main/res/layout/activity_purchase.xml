@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PurchaseActivity"
+    android:weightSum="100"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/gradient_background_selector_2"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:text="Thông tin đặt hàng"
+            android:textSize="30sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_weight="90"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:background="@color/app_main_color_vang"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinner_receive_address_purchase"
+                android:background="@color/teal_200"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="30"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:background="@color/app_main_color_vang"
+                android:id="@+id/recycler_item_purchase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/spinner_delivery_method_purahse"
+                android:background="@color/teal_200"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="30"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/spinner_payment_mehod_purchase"
+                android:background="@color/teal_700"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="30"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/app_main_color_xanhduong"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:textColor="@color/app_main_color_xanhduong"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tiền Hàng (Tạm Tính) "/>
+
+                    <TextView
+                        android:id="@+id/txt_number_of_item_purchase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(3 sản phẩm)"/>
+
+                    <TextView
+                        android:textColor="@color/app_main_color_xanhduong"
+                        android:id="@+id/txt_total_item_cost_purchase"
+                        android:textStyle="bold"
+                        android:layout_weight="100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="1,342,500đ"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:textColor="@color/app_main_color_xanhduong"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phí giao hàng "/>
+
+                    <TextView
+                        android:textColor="@color/app_main_color_xanhduong"
+                        android:id="@+id/txt_delivery_fee_purchase"
+                        android:textStyle="bold"
+                        android:layout_weight="100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="121,500đ"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:textColor="@color/app_main_color_xanhduong"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chiết khấu trực tiếp "/>
+
+                    <TextView
+                        android:textColor="@color/app_main_color_xanhduong"
+                        android:id="@+id/txt_total_discount_purchase"
+                        android:textStyle="bold"
+                        android:layout_weight="100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="-290,850đ"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:textColor="@color/app_main_color_xanhduong"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Áp dụng giảm giá "/>
+
+                    <TextView
+                        android:textColor="@color/app_main_color_xanhduong"
+                        android:id="@+id/txt_voucher_purchase"
+                        android:textStyle="bold"
+                        android:layout_weight="100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="-380,420đ"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/app_main_color_xanhduong"
+                        android:text="Tổng tiền: "/>
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(Đã bao gồm VAT)"/>
+
+                    <TextView
+                        android:id="@+id/txt_total_purchase"
+                        android:textStyle="bold"
+                        android:layout_weight="100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="792,730đ"
+                        android:textColor="@color/app_main_color_xanhduong"
+                        android:textSize="18sp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="end|center_vertical"
+        android:background="@color/app_main_color_vang">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng tiền: "
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/app_main_color_cam"/>
+
+        <TextView
+            android:id="@+id/txt_total_purchase_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="792,730 đ"
+            android:layout_marginEnd="20dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/app_main_color_cam"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_order_purcahse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="Đặt hàng"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/app_main_color_xanhduong"
+            android:background="@drawable/input_txt_background_trang_boder_circle"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

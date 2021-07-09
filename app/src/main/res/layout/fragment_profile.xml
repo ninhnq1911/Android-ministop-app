@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="user"
+            type="hcmute.edu.vn.mssv18110332.model.Useraccount" />
+        <import type="hcmute.edu.vn.mssv18110332.DAO.AddressDAO"/>
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.AndroidFinalCourseProject.AppBarOverlay">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/app_profile_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/app_main_color_datroi"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:popupTheme="@style/Theme.AndroidFinalCourseProject.PopupOverlay"
+                    app:title="Thông tin người dùng"
+                    app:titleTextColor="@color/app_main_color_vang" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_logout_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="#494949"
+                    app:layout_anchor="@id/app_profile_toolbar"
+                    app:layout_anchorGravity="right|center_vertical"
+                    android:background="@drawable/background_vang_corner_radius_10dp"
+                    android:text="Đăng xuất"/>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_main_color_vang">
+
+            <ImageView
+                android:id="@+id/img_avatar_profile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/layer_list_round_image_view"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.108"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/prf_txt_full_name"
+                android:layout_width="350dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_txt_background_trang_boder"
+                android:drawableStart="@drawable/ic_baseline_person_24"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:text="@{user.fullname.empty ?`Chưa cập nhật`: user.fullname}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_email_profile" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txt_birth_profile"
+                android:layout_width="350dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/input_txt_background_trang_boder"
+                android:drawableStart="@drawable/outline_cake_black_24dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="date"
+                android:paddingLeft="10dp"
+                android:text="@{user.birth.empty ?`Chưa cập nhật`: user.birth}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_phone_profile" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txt_birth_profile2"
+                android:layout_width="350dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/input_txt_background_trang_boder"
+                android:drawableStart="@drawable/ic_baseline_attribution_black_24"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="date"
+                android:paddingLeft="10dp"
+                android:text="@{user.gender == 1 ? `Nam` : `Nữ`}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_birth_profile" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txt_address_profile"
+                android:layout_width="350dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/input_txt_background_trang_boder"
+                android:drawableStart="@drawable/ic_baseline_location_on_black_24"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:text="@{user.address == 0 ?`Chưa cập nhật`:AddressDAO.getFull(user.address)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_birth_profile2" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txt_phone_profile"
+                android:layout_width="350dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/input_txt_background_trang_boder"
+                android:drawableStart="@drawable/ic_baseline_phone_24"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="phone"
+                android:paddingLeft="10dp"
+                android:text="@{user.phonenumber.empty ?`Chưa cập nhật`: user.phonenumber}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/prf_txt_full_name" />
+
+            <TextView
+                android:id="@+id/txt_Hi_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:text="Hi!"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.383"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_name_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:text='@{user.name.empty ?"Chưa cập nhật":user.name}'
+                android:textAlignment="textStart"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.035"
+                app:layout_constraintStart_toEndOf="@+id/txt_Hi_profile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_email_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@{user.email.empty ?`Chưa cập nhật`: user.email}"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.478"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name_profile" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_update_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_edit_black_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.934"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_address_profile"
+                app:layout_constraintVertical_bias="0.766" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="chỉnh sửa thông tin cá nhân"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_update_profile"
+                app:layout_constraintHorizontal_bias="0.963"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_address_profile"
+                app:layout_constraintVertical_bias="0.735" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_address_profile"
+                android:layout_width="177dp"
+                android:layout_height="37dp"
+                android:paddingEnd="10dp"
+                android:background="@color/transparent"
+                android:text="Xem sổ địa chỉ của bạn"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textColor="@color/app_main_color_xanhduong"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.87"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_address_profile"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_password_profile"
+                android:layout_width="200dp"
+                android:layout_height="37dp"
+                android:background="@color/transparent"
+                android:drawableRight="@drawable/ic_baseline_lock_black_24"
+                android:text="Thay đổi mật khẩu của bạn"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textColor="@color/app_main_color_xanhduong"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.854"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_address_profile"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
