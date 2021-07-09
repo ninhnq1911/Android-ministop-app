@@ -16,51 +16,83 @@ Technology Featured: Google firebase Authentication / Storage, Databinding, Andr
 Project source control: Github
 
 App feature
+
   Group 1: user manage 
+    
     * Authenticaion: Login / logout / register / reset password / forgot password
+    
     * Verification: Eamail verified / Phone verified
+    
     * Profile manage: Personal infor / Avatar image / Address book
+  
   Group 2: shopping business 
+    
     * Shopping: View product / Search product / Filter by category
+    
     * Cart manage: Add product to cart, change quantity, delete from card
+    
     * Purchasing: Fast Purchaseing a product / Purchasing products from cart
+    
     * Setting orders detail: Select receive address / select purchase method / select delivery unit
+    
     * Orders manage: View all orders / view a order / cancel order
 
 Android featured component use in this project:
 
   Group 1: layout
+    
     * Frame layout 
+    
     * Linear layout 
+    
     * Constrant layout
+    
     * Coodinate layout
+    
     * Appbar layout 
 
   Group 2: Navigation 
+    
     * Botton navigation 
+    
     * Navigation menu 
+    
     * Navigation Graph 
 
   Group 3: Vew 
+    
     * RecyclerView 
+    
     * Listview 
+    
     * Image view / circle image view
+    
     * ViewPager 
+    
     * Fragment 
+    
     * Card view 
+    
     * Circle Indicator 
+    
     * Text view / Button /  Radio / Check
 
   Group 4: Appcompat 
+    
     * Activity 
+    
     * Fragment 
+    
     * Search View 
+    
     * Toolbar / Action bar
+    
     * And more
 
   Group 5: Other 
 
 Activity:
+  
   * Welcome Activity: Welcome view of shopping app user have to login or register for an account before to use this app.
  
   * Login / Register / ForgotPassword / ChangePassword Activity
