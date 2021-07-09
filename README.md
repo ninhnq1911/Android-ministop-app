@@ -28,16 +28,19 @@ App feature
     * Orders manage: View all orders / view a order / cancel order
 
 Android featured component use in this project:
+
   Group 1: layout
     * Frame layout 
     * Linear layout 
     * Constrant layout
     * Coodinate layout
     * Appbar layout 
+
   Group 2: Navigation 
     * Botton navigation 
     * Navigation menu 
     * Navigation Graph 
+
   Group 3: Vew 
     * RecyclerView 
     * Listview 
@@ -47,28 +50,42 @@ Android featured component use in this project:
     * Card view 
     * Circle Indicator 
     * Text view / Button /  Radio / Check
+
   Group 4: Appcompat 
     * Activity 
     * Fragment 
     * Search View 
     * Toolbar / Action bar
     * And more
+
   Group 5: Other 
-    
+
 Activity:
   * Welcome Activity: Welcome view of shopping app user have to login or register for an account before to use this app.
+ 
   * Login / Register / ForgotPassword / ChangePassword Activity
+ 
   * HomeActiviity: Main activity of this application where we have 4 fragment
+    
     > Home Fragment: Home view have list items and category, search view for user to find and select which items they want.
+    
     > Cart Fragment: Where user chose which they want to purchase
+    
     > Orders Fragment: Where user view all thier orders and it's detail
+    
     > Profile Fragment: Where user manage thier profile and address book
+  
   * Update Profile Activity: Where user update thier profile info
+  
   * Phone Verify Activity 
+  
   * Address Book Activity
+  
   * Add New Address Activity
+  
   * Items Detail Activity 
+  
   * Purchase Activity
+  
   * Orders Detail Activity 
   
- 
