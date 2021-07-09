@@ -1,18 +1,27 @@
 # android-final-course-project-ministop-online-shopping-app
 
 Coppy right: This application is an Academy Project and only use for educate and non-commerce lisences.
+
 Author: Nguyen Quoc Ninh - ninhnguyendx779@gmail.com
+
 Description: This is an online shopping app for a convienences store like Mini-Stop.
 
 Android Studio: 4.3
+
 Lowest android verison support: Android R - API 30
+
 Virtual divice used in project: Google Pixel 3
+
 Android JDK: jdk_1.8
+
 Database: Mysql, Google Firebase
+
 DB mapping type: Object Relational Mapping
 
 Design Model: Model - View - View Model
+
 Technology Featured: Google firebase Authentication / Storage, Databinding, Androidx design plaform, ...
+
 Project source control: Github
 
 App feature
