@@ -11,9 +11,10 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@drawable/gradient_background_selector_2"
+        android:layout_height="50dp"
+        android:background="@color/app_main_color_datroi"
         android:orientation="vertical"
+        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,10 +24,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="0dp"
             android:textColor="@color/white"
             android:text="Thông tin đặt hàng"
-            android:textSize="30sp" />
+            android:textSize="24sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

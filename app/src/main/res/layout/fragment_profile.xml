@@ -69,23 +69,24 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatEditText
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/prf_txt_full_name"
                 android:layout_width="350dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/input_txt_background_trang_boder"
                 android:drawableStart="@drawable/ic_baseline_person_24"
-                android:focusable="false"
-                android:inputType="textPersonName"
                 android:paddingLeft="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:gravity="center"
                 android:text="@{user.fullname.empty ?`Chưa cập nhật`: user.fullname}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_email_profile" />
 
-            <androidx.appcompat.widget.AppCompatEditText
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_birth_profile"
                 android:layout_width="350dp"
                 android:layout_height="44dp"
@@ -93,8 +94,9 @@
                 android:background="@drawable/input_txt_background_trang_boder"
                 android:drawableStart="@drawable/outline_cake_black_24dp"
                 android:ems="10"
-                android:focusable="false"
-                android:inputType="date"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/black"
                 android:paddingLeft="10dp"
                 android:text="@{user.birth.empty ?`Chưa cập nhật`: user.birth}"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +104,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_phone_profile" />
 
-            <androidx.appcompat.widget.AppCompatEditText
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_birth_profile2"
                 android:layout_width="350dp"
                 android:layout_height="44dp"
@@ -110,8 +112,9 @@
                 android:background="@drawable/input_txt_background_trang_boder"
                 android:drawableStart="@drawable/ic_baseline_attribution_black_24"
                 android:ems="10"
-                android:focusable="false"
-                android:inputType="date"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/black"
                 android:paddingLeft="10dp"
                 android:text="@{user.gender == 1 ? `Nam` : `Nữ`}"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -120,24 +123,26 @@
                 app:layout_constraintTop_toBottomOf="@+id/txt_birth_profile" />
 
 
-            <androidx.appcompat.widget.AppCompatEditText
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_address_profile"
                 android:layout_width="350dp"
-                android:layout_height="44dp"
+                android:layout_height="80dp"
+                android:paddingEnd="10dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/input_txt_background_trang_boder"
                 android:drawableStart="@drawable/ic_baseline_location_on_black_24"
                 android:ems="10"
-                android:focusable="false"
-                android:inputType="text"
+                android:gravity="center"
+                android:textColor="@color/black"
                 android:paddingLeft="10dp"
                 android:text="@{user.address == 0 ?`Chưa cập nhật`:AddressDAO.getFull(user.address)}"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_birth_profile2" />
 
-            <androidx.appcompat.widget.AppCompatEditText
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_phone_profile"
                 android:layout_width="350dp"
                 android:layout_height="44dp"
@@ -145,8 +150,9 @@
                 android:background="@drawable/input_txt_background_trang_boder"
                 android:drawableStart="@drawable/ic_baseline_phone_24"
                 android:ems="10"
-                android:focusable="false"
-                android:inputType="phone"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/black"
                 android:paddingLeft="10dp"
                 android:text="@{user.phonenumber.empty ?`Chưa cập nhật`: user.phonenumber}"
                 app:layout_constraintEnd_toEndOf="parent"

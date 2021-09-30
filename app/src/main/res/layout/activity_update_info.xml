@@ -16,8 +16,9 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:background="@drawable/gradient_background_selector_2"
+            android:gravity="center_vertical"
+            android:layout_height="50dp"
+            android:background="@color/app_main_color_datroi"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,10 +29,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
+
                 android:textColor="@color/white"
                 android:text="Cập nhật thông tin"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -88,7 +89,7 @@
             android:background="@drawable/input_txt_background_trang_boder"
             android:drawableStart="@drawable/ic_baseline_phone_24"
             android:ems="10"
-            android:hint=" Enter phone"
+            android:hint=" Nhập số điện thoại của bạn"
             android:inputType="phone"
             android:paddingLeft="10dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -148,7 +149,7 @@
             android:background="@drawable/button_background_datroi"
             android:text="cập nhật"
             android:textColor="#FFFFFF"
-            android:textSize="24sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"

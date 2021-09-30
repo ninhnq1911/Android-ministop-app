@@ -47,13 +47,11 @@ public class AddressBookActivity extends AppCompatActivity {
         
         int uid = AppUtils.getCurrentUser().getId();
         List<Address> lst = AddressDAO.get_by_user(uid);
-        Log.d("USER",uid+"");
-        Log.d("LIST ADDRESS",lst.size() + "");
-        for (Address a: lst)
+
+        if (lst == null || lst.isEmpty())
         {
-            //Log.d("ADDRESS", a.getId() + "-" + UserAccountDAO.get_by_id(a.getUser()).getAddress());
-            //Log.d("ADDRESS", AddressDAO.isDefault(a) + "");
-            Log.d("ADDRESS", a.getName() + a.getWar()  + a.getDis() + a.getPro() + "" + a.getHome());
+            binding.recyclerAddressBook.setVisibility(View.GONE);
+            binding.emptyLayoutViewAddressBook.setVisibility(View.VISIBLE);
         }
 
         CircleImageView btn = findViewById(R.id.btn_add_new_address_book);

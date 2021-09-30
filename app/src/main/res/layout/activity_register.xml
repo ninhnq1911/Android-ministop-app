@@ -55,7 +55,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Username:"
+            android:text="Email:"
             android:layout_marginTop="10dp"
             android:textSize="15dp"/>
 
@@ -65,14 +65,14 @@
             android:layout_height="50dp"
             android:paddingStart="20dp"
             android:inputType="textEmailAddress"
-            android:textSize="24dp"
+            android:textSize="18dp"
             android:background="@drawable/input_txt_background_trang_boder"
             android:hint="Nhập email của bạn!"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Password:"
+            android:text="Mật khẩu:"
             android:layout_marginTop="10dp"
             android:textSize="15dp"/>
 
@@ -81,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:paddingStart="20dp"
-            android:textSize="24dp"
+            android:textSize="18dp"
             android:background="@drawable/input_txt_background_trang_boder"
             android:hint="Nhập password!"
             android:inputType="textPassword"/>
@@ -89,7 +89,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Confirm password:"
+            android:text="Nhập lại mật khẩu:"
             android:layout_marginTop="10dp"
             android:textSize="15dp"/>
 
@@ -98,7 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:paddingStart="20dp"
-            android:textSize="24dp"
+            android:textSize="18dp"
             android:background="@drawable/input_txt_background_trang_boder"
             android:hint="Xác nhận passowrd!"
             android:inputType="textPassword"/>
@@ -109,7 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_marginTop="20dp"
-            android:textSize="24dp"
+            android:textSize="18dp"
             android:textColor="@color/white"
             android:background="@drawable/button_background_datroi"
             android:layout_gravity="center_horizontal"

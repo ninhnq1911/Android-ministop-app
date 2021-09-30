@@ -15,6 +15,7 @@ import hcmute.edu.vn.mssv18110332.model.Payment;
 import hcmute.edu.vn.mssv18110332.model.Useraccount;
 import hcmute.edu.vn.mssv18110332.DAO.*;
 
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -50,6 +51,13 @@ public class PurchaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityPurchaseBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        Useraccount ua = AppUtils.getCurrentUser();
+        if (ua.getAddress() == 0)
+        {
+            Toast.makeText(this, "Bạn chưa cập nhật địa chỉ", Toast.LENGTH_SHORT).show();
+            this.finish();
+        }
 
         addressAdapter = new PurchaseAddressAdapter(getContext(),binding.spinnerReceiveAddressPurchase.getId(),AddressDAO.get_by_user(AppUtils.getCurrentUserID()));
         binding.spinnerReceiveAddressPurchase.setAdapter(addressAdapter);
@@ -172,11 +180,30 @@ public class PurchaseActivity extends AppCompatActivity {
                 Intent i = new Intent();
                 i.putExtra("result","OK");
                 setResult(Activity.RESULT_OK,i);
+                sendConfirmEmail(u,orders,payment);
                 finish();
             }
         });
 
         updateUI();
+    }
+
+    void sendConfirmEmail(Useraccount user, Orders orders, Payment payment)
+    {
+        String message = "Chào %name%!<br>".replace("%name%",user.getName());
+        message += "Đơn hàng của bạn đã được gửi đến MiniStop vào lúc %time%<br>".replace("%id%",orders.getId()+"").replace("%time%",orders.getStart_date());
+        message += "Người nhận: %name%<br>".replace("%name%",orders.getUname());
+        message += "địa chỉ nhận hàng: %phone% <br>                 %address%<br>".replace("%phone%",orders.getUphone()).replace("%address%",orders.getUaddress());
+        message += "Phương thức thanh toán: %method%<br>".replace("%method%",PurchaseMethodDAO.get_by_id(payment.getMethod()).getName());
+        message += "Đơn hàng của bạn được vận chuyển bởi %delivery%.<br>".replace("%delivery%",DeliveryDAO.get_by_id(orders.getDid()).getName());
+        message += "Với tổng giá trị đơn hàng là: %total%<br>".replace("%total%", AppUtils.getVietNamDongFormat(payment.getAmount()));
+        message += "Bạn vui lòng mở ứng dụng MiniStop và xem phần đơn hàng / chi tiết đơn hàng để có thên thông tin bạn nhé!<br>";
+        message += "Ministop sẽ cập nhật đến bạn những thông tin mới nhất về đơn hàng trong thời gian sớn nhất!<br>";
+        message += "Cảm ơn và hân hạnh được phục vụ bạn!<br>";
+        message += "Thân ái,<br>";
+        message += "Trung tâm chăm sóc khách hàng MiniStop!<br>";
+
+        AppUtils.sendEmail(getContext(),message,user.getEmail());
     }
 
     void updateUI()

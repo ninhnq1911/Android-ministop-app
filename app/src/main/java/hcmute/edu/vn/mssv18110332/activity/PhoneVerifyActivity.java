@@ -63,7 +63,9 @@ public class PhoneVerifyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_verify);
+        String phone = (String) getIntent().getExtras().get("phone");
         phoneText = (EditText) findViewById(R.id.phoneText);
+        phoneText.setFocusable(false);
         codeText = (EditText) findViewById(R.id.codeText);
         verifyButton = (Button) findViewById(R.id.verifyButton);
         sendButton = (Button) findViewById(R.id.sendButton);
@@ -75,13 +77,13 @@ public class PhoneVerifyActivity extends AppCompatActivity {
         fbAuth = FirebaseAuth.getInstance();
         fu = fbAuth.getCurrentUser();
         ua = AppUtils.getCurrentUser();
+        phoneText.setText(phone);
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sendCode(v);
             }
         });
-
         resendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,6 +96,12 @@ public class PhoneVerifyActivity extends AppCompatActivity {
         ProgressDialog pd = new ProgressDialog();
         pd.show_progress_dialog(PhoneVerifyActivity.this);
         number = ccp.getFullNumberWithPlus();
+        if (UserAccountDAO.get_by_phone(number)!=null)
+        {
+            Toast.makeText(PhoneVerifyActivity.this, "Số điện thoại đã tồn tại!", Toast.LENGTH_SHORT).show();
+            pd.hide_progress_dialog();
+            return;
+        }
         Log.d(TAG,"Send code to Phone: " + number);
         setUpVerificatonCallbacks();
         Log.d(TAG,"Setup call back complete");

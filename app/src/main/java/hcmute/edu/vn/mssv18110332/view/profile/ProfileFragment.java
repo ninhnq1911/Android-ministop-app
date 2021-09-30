@@ -169,7 +169,17 @@ public class ProfileFragment extends Fragment {
                         Intent data = result.getData();
                         String r = (String) data.getExtras().get("result");
                         if (r.equals("OK")) {
-                            binding.setUser(AppUtils.getCurrentUser());
+                            Useraccount u = AppUtils.getCurrentUser();
+                            binding.setUser(u);
+                            storageReference = FirebaseStorage.getInstance().getReference();
+                            StorageReference profileRef = storageReference.child("users/"+u.getId()+"/profile.jpg");
+                            profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    //Picasso.get().load(uri).into(binding.imgAvatarProfile);
+                                    Glide.with(getContext()).load(uri.toString()).into(binding.imgAvatarProfile);
+                                }
+                            });
                             binding.invalidateAll();
                         }
                     }

@@ -57,14 +57,14 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_marginTop="10dp"
-            android:text="You have to verify your email before registration is complete!"
+            android:text="Để hoàn thành đăng kí bạn vui lòng xác nhận email của bạn hoạt động!"
             android:textSize="24dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="type your email again:"
+            android:text="Nhập lại email của bạn:"
             android:textSize="15dp" />
 
         <EditText
@@ -72,10 +72,10 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/input_txt_background_trang_boder"
-            android:hint="Type your email here!"
+            android:hint="Nhập email của bạn!"
             android:inputType="textEmailAddress"
             android:paddingStart="20dp"
-            android:textSize="24dp" />
+            android:textSize="18dp" />
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -87,9 +87,9 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/button_background_datroi"
-            android:text="Verify"
+            android:text="Xác nhận"
             android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textSize="18dp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

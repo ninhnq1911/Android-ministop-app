@@ -15,7 +15,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/wel_btn_login"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button_background_vang"
@@ -24,7 +24,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/wel_btn_register"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button_background_vang"

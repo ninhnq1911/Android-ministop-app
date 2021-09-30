@@ -29,7 +29,7 @@ public class AddressDAO {
         JsonArray ja = DBExecute.execute_query("SELECT * FROM `address` WHERE `id` = " + String.valueOf(id) + ";");
         Type listType = new TypeToken<List<Address>>() {}.getType();
         lst = new Gson().fromJson(ja, listType);
-        if (lst == null) return null;
+        if (lst == null || lst.isEmpty()) return null;
         return lst.get(0);
     }
 

@@ -13,6 +13,7 @@ import hcmute.edu.vn.mssv18110332.helper.AppUtils;
 import hcmute.edu.vn.mssv18110332.helper.Gmail;
 import hcmute.edu.vn.mssv18110332.helper.ProgressDialog;
 import hcmute.edu.vn.mssv18110332.helper.Session;
+import hcmute.edu.vn.mssv18110332.model.Address;
 import hcmute.edu.vn.mssv18110332.model.Useraccount;
 import hcmute.edu.vn.mssv18110332.DAO.*;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +42,7 @@ import com.squareup.picasso.Picasso;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
 import java.util.UUID;
 
 public class UpdateInfoActivity extends AppCompatActivity {
@@ -58,6 +60,7 @@ public class UpdateInfoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         binding = ActivityUpdateInfoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -95,6 +98,7 @@ public class UpdateInfoActivity extends AppCompatActivity {
                 if (!phone.equals(binding.txtPhoneProfile.getText().toString()))
                 {
                     Intent i = new Intent(UpdateInfoActivity.this, PhoneVerifyActivity.class);
+                    i.putExtra("phone",binding.txtPhoneProfile.getText().toString());
                     someActivityResultLauncher.launch(i);
                 }
 

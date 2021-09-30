@@ -107,20 +107,24 @@ public class AddNewAdressActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ProgressDialog pd = new ProgressDialog();
                 pd.show_progress_dialog(getContext());
+                Useraccount u = AppUtils.getCurrentUser();
                 Address a = new Address();
                 a.setId(0);
                 a.setName(binding.txtNameAddress.getText().toString());
                 a.setPro(proAdapter.getItem(binding.proSpinner.getSelectedItemPosition()).getId());
                 a.setDis(disAdapter.getItem(binding.disSpinner.getSelectedItemPosition()).getId());
-                a.setUser(AppUtils.getCurrentUserID());
+                a.setUser(u.getId());
                 a.setWar(warAdapter.getItem(binding.warSpinner.getSelectedItemPosition()).getId());
                 a.setHome(binding.txtAddressHome.getText().toString());
                 if (mAddress!=null)
                     AddressDAO.delete(mAddress);
                 AddressDAO.insert(a);
+                if (u.getAddress() == 0)
+                {
+                    binding.checkboxDefaultAddress.setChecked(true);
+                }
                 if (binding.checkboxDefaultAddress.isChecked())
                 {
-                    Useraccount u = AppUtils.getCurrentUser();
                     List<Address> la = AddressDAO.get_by_user(u.getId());
                     int i_max = -1;
                     for (Address ia: la)

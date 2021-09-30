@@ -13,13 +13,11 @@
         android:layout_height="150dp"
         android:src="@drawable/vertical_ministop_icon"/>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
         android:orientation="vertical"
-
         android:layout_marginHorizontal="20dp">
 
         <TextView
@@ -45,7 +43,7 @@
             android:layout_height="50dp"
             android:background="@drawable/input_txt_background_trang_boder"
             android:hint="Nhập email của bạn!"
-            android:textSize="24dp" />
+            android:textSize="18dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -62,7 +60,7 @@
             android:layout_width="match_parent"
             android:hint="Nhập passowrd của bạn!"
             android:inputType="textPassword"
-            android:textSize="24dp"/>
+            android:textSize="18dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_forgot_password_login"
@@ -78,7 +76,7 @@
             android:layout_marginTop="20dp"
             android:layout_gravity="center_horizontal"
             android:layout_width="200dp"
-            android:textSize="24dp"
+            android:textSize="18dp"
             android:textColor="@color/white"
             android:layout_height="50dp"
             android:text="Đăng nhập"/>

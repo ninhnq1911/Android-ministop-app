@@ -23,11 +23,11 @@ public class WelcomeActivity extends AppCompatActivity {
         binding = ActivityWelcomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Intent i = new Intent(WelcomeActivity.this,ItemDetailActivity.class);
+        /*Intent i = new Intent(WelcomeActivity.this,ItemDetailActivity.class);
         Gson gson = new Gson();
         String json = gson.toJson(ItemsDAO.get_all().get(0));
         i.putExtra("item", json);
-        //startActivity(i);
+        startActivity(i);*/
 
         binding.welBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override

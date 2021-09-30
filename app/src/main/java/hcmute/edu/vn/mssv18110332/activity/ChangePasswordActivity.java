@@ -77,7 +77,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
                     Log.d("CHANG PASSWORD","Password mới bạn nhập không khớp nhau");
                     return;
                 }
-
                 if (!DataValidate.validatePassword(new_pass).equals("OK"))
                 {
                     Toast.makeText(getContext(),"Password phải có ít nhất 6 kí tự gồm SỐ và CHỮ CÁI",Toast.LENGTH_SHORT).show();

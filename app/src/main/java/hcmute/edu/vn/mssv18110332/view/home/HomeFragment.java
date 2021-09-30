@@ -161,6 +161,8 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
                 {
                     itemsList = ItemsDAO.get_all();
                     adapter.setData(itemsList);
+                    binding.emptyLayoutViewHome.setVisibility(View.GONE);
+                    binding.homeRecyclerviewItems.setVisibility(View.VISIBLE);
                     return;
                 }
                 ProgressDialog pd = new ProgressDialog();
@@ -170,6 +172,17 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
                     for (Items item: ItemsDAO.get_by_category(id))
                         itemsList.add(item);
                 adapter.setData(itemsList);
+                if (itemsList.isEmpty())
+                {
+
+                    binding.homeRecyclerviewItems.setVisibility(View.GONE);
+                    binding.emptyLayoutViewHome.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    binding.emptyLayoutViewHome.setVisibility(View.GONE);
+                    binding.homeRecyclerviewItems.setVisibility(View.VISIBLE);
+                }
                 searchView.setIconified(true);
                 searchView.setQuery("", false);
                 searchView.clearFocus();
