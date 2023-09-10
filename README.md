@@ -1,10 +1,12 @@
-# android-final-course-project-ministop-online-shopping-app
+# android-final-course-project
 
 Coppy right: This application is an Academy Project and only use for educate and non-commerce lisences.
 
 Author: Nguyen Quoc Ninh - ninhnguyendx779@gmail.com
 
 Description: This is an online shopping app for a convienences store like Mini-Stop.
+
+Demo video: https://www.youtube.com/watch?v=DduC152_w3o 
 
 Android Studio: 4.3
 
